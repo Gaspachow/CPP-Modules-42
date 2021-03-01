@@ -6,13 +6,48 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 16:59:14 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/01 19:17:41 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/01 20:04:40 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.class.hpp"
 
-int	main() {
+std::string	crappify_string(std::string src)
+{
+	if (src.size() > 10)
+	{
+		src.resize(9);
+		src.append(".");
+	}
+	else if (src.size() < 10)
+	{
+		while (src.size() != 10)
+			src.insert(0, " ");
+	}
+	return (src);
+}
+
+void		crappy_search(Contact book[8], int contactCount)
+{
+	int i;
+
+	std::cout << "     index|first name| last name|  nickname" << std::endl;
+	i = 0;
+	while (i < contactCount)
+	{
+		std::cout << "         " << i;
+		std::cout << '|';
+		std::cout << crappify_string(book[i].getFirstName());
+		std::cout << '|';
+		std::cout << crappify_string(book[i].getLastName());
+		std::cout << '|';
+		std::cout << crappify_string(book[i].getNickname());
+		std::cout << std::endl;
+		i++;
+	}
+}
+
+int			main() {
 	std::string	buf;
 	Contact		book[8];
 	int			contactCount;	
@@ -37,7 +72,10 @@ int	main() {
 		}
 		else if (buf == "SEARCH")
 		{
-			std::cout << "Searching..." << std::endl;
+			if (!contactCount)
+				std::cout << "You have no contacts :'(" << std::endl;
+			else
+				crappy_search(book, contactCount);
 		}
 	}
 	return (0);
