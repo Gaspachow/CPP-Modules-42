@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 17:38:38 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/01 19:14:42 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/01 20:21:14 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ class Contact {
 		Contact();
 		~Contact();
 		void			setAttributes();
+		void			printAttributes();
 		std::string		getFirstName();
 		std::string		getLastName();
 		std::string		getNickname();

@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 16:59:14 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/01 20:04:40 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/01 20:34:53 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ std::string	crappify_string(std::string src)
 
 void		crappy_search(Contact book[8], int contactCount)
 {
-	int i;
+	int			i;
+	std::string	buf;
 
 	std::cout << "     index|first name| last name|  nickname" << std::endl;
 	i = 0;
@@ -45,6 +46,18 @@ void		crappy_search(Contact book[8], int contactCount)
 		std::cout << std::endl;
 		i++;
 	}
+	while (42)
+	{
+		std::cout << "Enter an index: ";
+		std::getline(std::cin, buf);
+		i = atoi(buf.c_str());
+		if (buf.size() == 1 && buf.at(0) >= '0' && buf.at(0) <= contactCount - 1 + '0')
+			break;
+		else
+			std::cout << "Let's try again but with a correct index..." << std::endl;
+		
+	}
+	book[i].printAttributes();
 }
 
 int			main() {
@@ -62,7 +75,7 @@ int			main() {
 		else if (buf == "ADD")
 		{
 			if (contactCount == 8)
-				std::cout << "Whoopsie... You have reached the max amount of contacts." << std::endl;
+				std::cout << "HOLD UP... You have reached the max amount of contacts." << std::endl;
 			else
 			{
 				std::cout << "Let's add a new contact!" << std::endl;
