@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 17:38:33 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/01 20:22:56 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/02 16:57:12 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void		Contact::setAttributes() {
 }
 
 void		Contact::printAttributes() {
+	std::cout << "------" << std::endl;
 	std::cout << "First Name: ";
 	std::cout << this->_f_name << std::endl;
 	std::cout << "Last Name: ";
@@ -70,6 +71,7 @@ void		Contact::printAttributes() {
 	std::cout << this->_color << std::endl;
 	std::cout << "Darkest Secret: ";
 	std::cout << this->_secret << std::endl;
+	std::cout << "------" << std::endl;
 }
 
 std::string	Contact::getFirstName() {

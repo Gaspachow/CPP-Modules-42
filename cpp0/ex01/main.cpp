@@ -6,23 +6,19 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 16:59:14 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/01 20:34:53 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/02 17:01:53 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.class.hpp"
+#include <iomanip>
 
-std::string	crappify_string(std::string src)
+std::string	short_string(std::string src)
 {
 	if (src.size() > 10)
 	{
 		src.resize(9);
 		src.append(".");
-	}
-	else if (src.size() < 10)
-	{
-		while (src.size() != 10)
-			src.insert(0, " ");
 	}
 	return (src);
 }
@@ -36,13 +32,17 @@ void		crappy_search(Contact book[8], int contactCount)
 	i = 0;
 	while (i < contactCount)
 	{
-		std::cout << "         " << i;
+		std::cout << std::setw(10);
+		std::cout << i;
 		std::cout << '|';
-		std::cout << crappify_string(book[i].getFirstName());
+		std::cout << std::setw(10);
+		std::cout << short_string(book[i].getFirstName());
 		std::cout << '|';
-		std::cout << crappify_string(book[i].getLastName());
+		std::cout << std::setw(10);
+		std::cout << short_string(book[i].getLastName());
 		std::cout << '|';
-		std::cout << crappify_string(book[i].getNickname());
+		std::cout << std::setw(10);
+		std::cout << short_string(book[i].getNickname());
 		std::cout << std::endl;
 		i++;
 	}
@@ -51,7 +51,7 @@ void		crappy_search(Contact book[8], int contactCount)
 		std::cout << "Enter an index: ";
 		std::getline(std::cin, buf);
 		i = atoi(buf.c_str());
-		if (buf.size() == 1 && buf.at(0) >= '0' && buf.at(0) <= contactCount - 1 + '0')
+		if (buf.size() == 1 && buf.at(0) >= '0' && buf.at(0) + 1 <= contactCount + '0')
 			break;
 		else
 			std::cout << "Let's try again but with a correct index..." << std::endl;
