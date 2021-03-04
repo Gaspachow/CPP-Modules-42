@@ -6,11 +6,11 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:34:05 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/04 13:12:57 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/04 16:49:50 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Pony.class.hpp"
+#include "Pony.hpp"
 
 void		ponyOnTheStack() {
 	Pony stackPony("Stacky");

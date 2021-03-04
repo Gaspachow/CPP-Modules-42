@@ -6,13 +6,12 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:20:50 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/04 13:09:18 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/04 16:48:20 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PONY_CLASS_H
 # define PONY_CLASS_H
-# include <string>
 # include <iostream>
 
 class Pony {

@@ -1,5 +1,5 @@
 
-SRCS	= main.cpp Contact.class.cpp
+SRCS	= main.cpp Contact.cpp
 
 OBJS	= $(SRCS:.cpp=.o)
 

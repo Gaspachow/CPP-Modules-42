@@ -1,5 +1,5 @@
 
-SRCS	= main.cpp Pony.class.cpp
+SRCS	= main.cpp Pony.cpp
 
 OBJS	= $(SRCS:.cpp=.o)
 
@@ -11,7 +11,7 @@ FLAGS	= -Wall -Wextra -Werror
 
 INCLUDE	= none
 
-HEADER	= Pony.class.hpp
+HEADER	= Pony.hpp
 
 
 

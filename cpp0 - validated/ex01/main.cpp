@@ -6,11 +6,11 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 16:59:14 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/02 17:01:53 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/04 16:50:55 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.class.hpp"
+#include "Contact.hpp"
 #include <iomanip>
 
 std::string	short_string(std::string src)
