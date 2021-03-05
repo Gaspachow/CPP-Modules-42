@@ -5,7 +5,7 @@ OBJS	= $(SRCS:.cpp=.o)
 
 NAME	= pony.out
 
-CLANG	= clang++
+CLANG	= clang++ -std=c++98 -pedantic-errors
 
 FLAGS	= -Wall -Wextra -Werror
 
