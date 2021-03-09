@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 15:53:56 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/09 18:26:44 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/09 18:53:51 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,6 @@ int	error_manager(int status, std::string errMessage) {
 }
 
 int	args_checker(std::string &fn, std::string &s1, std::string &s2, std::ifstream &fs) {
-	if (s1 == s2)
-		return(error_manager(2, "s1 and s2 share the same value."));
 	if (fn.empty() || s1.empty() || s2.empty())
 		return(error_manager(3, "empty string as argument is not supported."));
 	if (!(fs.good()))
