@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 15:53:56 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/09 18:53:51 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/09 19:14:45 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,9 @@ int	gaspacho_replace(char **av) {
 
 	tempStream << fileStream.rdbuf();
 	fileContent = tempStream.str();
+
+	if (fileContent.empty())
+		return (error_manager(5, "source file is empty, or you selected a directory"));
 
 	while ((pos = fileContent.find(oldStr, pos)) != std::string::npos)
 	{
