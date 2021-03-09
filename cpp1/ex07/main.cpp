@@ -6,15 +6,16 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 15:53:56 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/09 16:19:35 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/09 16:26:29 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <iostream>
+#include <fstream>
 
 int	error_manager(int status, std::string errMessage) {
-	std::cerr << "Error: " << errMessage << std::endl;
+	std::cout << "Error: " << errMessage << std::endl;
 	return (status);
 }
 

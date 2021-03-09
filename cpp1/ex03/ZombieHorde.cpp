@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 16:54:01 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/05 18:27:36 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/09 16:26:35 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ ZombieHorde::ZombieHorde(int N) {
 
 	if (N <= 0)
 	{
-		std::cerr << "Error: N invalid, defaulting to a 10 zombies horde..." << std::endl;
+		std::cout << "Error: N invalid, defaulting to a 10 zombies horde..." << std::endl;
 		N = 10;
 	}
 	_horde = new Zombie[N];
