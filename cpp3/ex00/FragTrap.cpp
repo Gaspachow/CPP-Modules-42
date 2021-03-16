@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 15:04:27 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/15 18:16:31 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/16 16:06:13 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ void		FragTrap::beRepaired(unsigned int amount) {
 	if (amount >= _maxHp - _hp) // safety in case of (_hp + amount) overflow
 		_hp = _maxHp;
 	else
-		_hp = ((_hp + amount) < _maxHp) ? (_hp + amount) : 100;
+		_hp = ((_hp + amount) < _maxHp) ? (_hp + amount) : _maxHp;
 
 	std::cout << "FR4G-TP " << _name << " gets a repair worth " << amount << " HP points, ";
 	std::cout << "leaving them with " << _hp << " HP points!" << std::endl;
