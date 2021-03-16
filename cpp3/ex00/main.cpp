@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 15:49:15 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/15 18:21:46 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/16 16:35:21 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,27 +20,26 @@ int	main() {
 	srand(time(0));
 
 	FragTrap clappy("Clappy");
-	FragTrap blank;
-
-	blank = clappy;
 
 	std::cout << std::endl;
 	std::cout << "--- Test takeDamage ---" << std::endl;
-	blank.takeDamage(50);
-	blank.takeDamage(70);
+	clappy.takeDamage(50);
+	clappy.takeDamage(70);
 	std::cout << std::endl;
 	std::cout << "--- Test beRepaired ---" << std::endl;
-	blank.beRepaired(20);
-	blank.beRepaired(200);
+	clappy.beRepaired(20);
+	clappy.beRepaired(200);
 	std::cout << std::endl;
 	std::cout << "--- Test attack functions ---" << std::endl;
-	blank.meleeAttack("Rambo");
-	blank.rangedAttack("Bobby");
+	clappy.meleeAttack("Rambo");
+	clappy.rangedAttack("Bobby");
 	std::cout << std::endl;
 	std::cout << "--- Test vaulthunter_dot_exe ---" << std::endl;
 	for (int i = 0 ; i < 6 ; i++) {
-		blank.vaulthunter_dot_exe("Gaspacho");
+		clappy.vaulthunter_dot_exe("Gaspacho");
 	}
+	std::cout << std::endl;
 
+	std::cout << "--- Destructor messages should be below ---" << std::endl;
 	return(0);
 }
