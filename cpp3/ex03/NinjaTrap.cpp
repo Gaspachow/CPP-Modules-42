@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 15:26:12 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/17 15:59:07 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/17 16:11:33 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,24 +61,24 @@ NinjaTrap	&NinjaTrap::operator=(NinjaTrap const &rhs) {
 }
 
 void		NinjaTrap::ninjaShoebox(ClapTrap const &target) const {
-	std::cout << "NINJ4-TP " << _name << " slices the boring ClapTrap " << target.getName() << std::endl;
+	std::cout << _type << " " << _name << " slices the boring ClapTrap " << target.getName() << std::endl;
 	return;
 }
 
 void		NinjaTrap::ninjaShoebox(FragTrap const &target) const {
-	std::cout << "NINJ4-TP " << _name << " avoids that pathetic attack from FR4G-TP " << target.getName();
+	std::cout << _type << " " << _name << " avoids that pathetic attack from FR4G-TP " << target.getName();
 	std::cout << " and slices him in the bearings! Ouch!" << std::endl;
 	return;
 }
 
 void		NinjaTrap::ninjaShoebox(ScavTrap const &target) const {
-	std::cout << "NINJ4-TP " << _name << " dares to approach SC4V-TP " << target.getName();
+	std::cout << _type << " " << _name << " dares to approach SC4V-TP " << target.getName();
 	std::cout << " and destroys him using a special massive Frog attack!" << std::endl;
 	return;
 }
 
 void		NinjaTrap::ninjaShoebox(NinjaTrap const &target) const {
-	std::cout << "NINJ4-TP " << _name << " and other NINJ4-TP " << target.getName();
+	std::cout << _type << " " << _name << " and other NINJ4-TP " << target.getName();
 	std::cout << " stare at each other for a second... The first says 'Omae wa mo shindeiru' and destroys the second in the blink of an eye... wow." << std::endl;
 	return;
 }
