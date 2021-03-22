@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Victim.hpp                                         :+:      :+:    :+:   */
+/*   Peon.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/22 18:54:07 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/22 19:43:59 by gsmets           ###   ########.fr       */
+/*   Created: 2021/03/22 19:17:37 by gsmets            #+#    #+#             */
+/*   Updated: 2021/03/22 19:44:10 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VICTIM_CLASS_H
-# define VICTIM_CLASS_H
+#ifndef PEON_CLASS_H
+# define PEON_CLASS_H
+# include "Victim.hpp"
 # include <string>
-# include <iostream>
 
-class Victim {
+class Peon : public Victim {
 
 private:
-	std::string _name;
-	Victim(); // A Victim can't be created with no name.
+	Peon(); // A Peon can't be created with no name.
 
 public:
-	Victim(std::string name);
-	Victim(Victim const &copy);
-	virtual ~Victim();
+	Peon(std::string name);
+	Peon(Peon const &copy);
+	virtual ~Peon();
 
-	Victim	&operator=(Victim const &rhs);
+	Peon	&operator=(Peon const &rhs);
 
-	std::string	getName() const;
-	virtual void		getPolymorphed() const;
+	void		getPolymorphed() const;
 };
-
-std::ostream &operator<<(std::ostream &o, Victim const &rhs);
 
 #endif

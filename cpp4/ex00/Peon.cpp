@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Peon.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/22 18:50:45 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/22 19:35:38 by gsmets           ###   ########.fr       */
+/*   Created: 2021/03/22 19:17:21 by gsmets            #+#    #+#             */
+/*   Updated: 2021/03/22 19:44:40 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Sorcerer.hpp"
-#include "Victim.hpp"
 #include "Peon.hpp"
 #include <iostream>
+#include <string>
 
-int	main() {
-	Sorcerer	robert("Robert", "the Magnificent");
+Peon::Peon(std::string name) : Victim(name) {
+	std::cout << "Zog Zog." << std::endl;
+	return;
+}
 
-	Victim		jim("Jimmy");
-	Peon		joe("Joe");
+Peon::~Peon() {
+	std::cout << "Bleuark..." << std::endl;
+	return;
+}
 
-	std::cout << robert << jim << joe;
+Peon		&Peon::operator=(Peon const &rhs) {
+	Victim::operator=(rhs);
+	return (*this);
+}
 
-	robert.polymorph(jim);
-	robert.polymorph(joe);
-
-	return (0);
+void		Peon::getPolymorphed() const {
+	std::cout << this->getName() << " has been turned into a pink pony!" << std::endl;
+	return;
 }

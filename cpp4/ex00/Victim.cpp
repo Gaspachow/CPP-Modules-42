@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/22 18:53:53 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/22 19:01:20 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/22 19:37:36 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@
 
 Victim::Victim(std::string name) : _name(name) {
 	std::cout << "Some random victim called " <<_name << " just appeared!" << std::endl;
+	return;
+}
+
+Victim::Victim(Victim const &copy) : _name(copy._name) {
+	std::cout << "Some random victim clone of " << _name << " just appeared!" << std::endl;
 	return;
 }
 
