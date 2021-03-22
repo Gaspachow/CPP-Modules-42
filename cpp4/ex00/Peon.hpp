@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/22 19:17:37 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/22 19:44:10 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/22 19:53:59 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ public:
 	Peon(Peon const &copy);
 	virtual ~Peon();
 
-	Peon	&operator=(Peon const &rhs);
+	Peon		&operator=(Peon const &rhs);
 
 	void		getPolymorphed() const;
 };

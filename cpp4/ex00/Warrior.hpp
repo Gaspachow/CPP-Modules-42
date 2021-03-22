@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Victim.hpp                                         :+:      :+:    :+:   */
+/*   Warrior.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/22 18:54:07 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/22 19:53:20 by gsmets           ###   ########.fr       */
+/*   Created: 2021/03/22 19:56:15 by gsmets            #+#    #+#             */
+/*   Updated: 2021/03/22 19:56:48 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VICTIM_CLASS_H
-# define VICTIM_CLASS_H
+#ifndef WARRIOR_CLASS_H
+# define WARRIOR_CLASS_H
+# include "Victim.hpp"
 # include <string>
-# include <iostream>
 
-class Victim {
+class Warrior : public Victim {
 
 private:
-	std::string _name;
-	Victim(); // A Victim can't be created with no name.
+	Warrior(); // A Warrior can't be created with no name.
 
 public:
-	Victim(std::string name);
-	Victim(Victim const &copy);
-	virtual ~Victim();
+	Warrior(std::string name);
+	Warrior(Warrior const &copy);
+	virtual ~Warrior();
 
-	Victim				&operator=(Victim const &rhs);
+	Warrior		&operator=(Warrior const &rhs);
 
-	std::string			getName() const;
-	virtual void		getPolymorphed() const;
+	void		getPolymorphed() const;
 };
-
-std::ostream &operator<<(std::ostream &o, Victim const &rhs);
 
 #endif
