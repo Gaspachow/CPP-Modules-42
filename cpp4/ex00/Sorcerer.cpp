@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/22 18:30:44 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/22 20:03:14 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/23 13:58:19 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@
 
 Sorcerer::Sorcerer(std::string name, std::string title) : _name(name), _title(title) {
 	std::cout << this->getNameTitle() << ", is born!" << std::endl;
+	return;
+}
+
+Sorcerer::Sorcerer(Sorcerer const &copy) : _name(copy._name), _title(copy._title) {
+	std::cout << "Some random Sorcerer clone of " << _name << " just appeared!" << std::endl;
 	return;
 }
 

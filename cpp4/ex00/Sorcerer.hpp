@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/22 18:30:51 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/22 19:05:16 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/23 13:56:55 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ private:
 
 public:
 	Sorcerer(std::string name, std::string title);
+	Sorcerer(Sorcerer const &copy);
 	virtual ~Sorcerer();
 
 	Sorcerer	&operator=(Sorcerer const &rhs);
