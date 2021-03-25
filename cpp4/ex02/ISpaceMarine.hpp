@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/24 18:18:59 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/25 17:06:47 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/25 17:56:00 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ class ISpaceMarine {
 public:
     virtual ~ISpaceMarine() {}
     virtual ISpaceMarine* clone() const = 0;
-    // virtual void battleCry() const = 0;
-    // virtual void rangedAttack() const = 0;
-    // virtual void meleeAttack() const = 0;
+    virtual void battleCry() const = 0;
+    virtual void rangedAttack() const = 0;
+    virtual void meleeAttack() const = 0;
 };
 
 #endif
