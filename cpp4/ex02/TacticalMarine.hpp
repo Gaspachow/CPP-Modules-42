@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ISpaceMarine.hpp                                   :+:      :+:    :+:   */
+/*   TacticalMarine.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/24 18:18:59 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/25 17:06:47 by gsmets           ###   ########.fr       */
+/*   Created: 2021/03/25 15:00:22 by gsmets            #+#    #+#             */
+/*   Updated: 2021/03/25 17:06:03 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ISPACEMARINE_INTERFACE_H
-# define ISPACEMARINE_INTERFACE_H
+#ifndef TACTMARINE_CLASS_H
+# define TACTMARINE_CLASS_H
+# include "ISpaceMarine.hpp"
 
-class ISpaceMarine {
+class TacticalMarine : public ISpaceMarine {
 
 public:
-    virtual ~ISpaceMarine() {}
-    virtual ISpaceMarine* clone() const = 0;
-    // virtual void battleCry() const = 0;
-    // virtual void rangedAttack() const = 0;
-    // virtual void meleeAttack() const = 0;
+	TacticalMarine();
+	TacticalMarine(TacticalMarine const &copy);
+	virtual ~TacticalMarine();
+
+	TacticalMarine	&operator=(TacticalMarine const &rhs);
+
+	ISpaceMarine	*clone() const;
+	// void			battleCry() const;
+	// void			rangedAttack() const;
+	// void			meleeAttack() const;
 };
 
 #endif
