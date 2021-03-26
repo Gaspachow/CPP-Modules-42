@@ -6,13 +6,12 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 15:34:37 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/26 17:10:24 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/26 19:34:29 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 #include <string>
-#include <iostream>
 
 AMateria::AMateria(std::string const &type) : _type(type), _xp(0) {
 	return;
@@ -42,10 +41,9 @@ unsigned int		AMateria::getXP() const {
 }
 
 void			AMateria::use(ICharacter &target) {
-	if (&target == NULL)
-		return;
+	std::string dumbSubject = target.getName();
 	unsigned int newXP = _xp + 10;
 	if (newXP > _xp)
-		_xp == newXP;
+		_xp = newXP;
 	return;
 }

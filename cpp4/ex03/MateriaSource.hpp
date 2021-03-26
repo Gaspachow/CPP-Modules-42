@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.hpp                                     :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/26 17:12:04 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/26 19:41:34 by gsmets           ###   ########.fr       */
+/*   Created: 2021/03/26 20:21:14 by gsmets            #+#    #+#             */
+/*   Updated: 2021/03/26 20:37:05 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICHARACTER_INTERFACE_CLASS_H
-# define ICHARACTER_INTERFACE_CLASS_H
+#ifndef MATSOURCE_CLASS_H
+# define MATSOURCE_CLASS_H
 # include <string>
-# include "AMateria.hpp"
+# include "IMateriaSource.hpp"
 
-class AMateria;
+class MateriaSource : public IMateriaSource {
 
-class ICharacter {
+private:
+	AMateria	*_sources[4];
 
 public:
-	virtual						~ICharacter() {}
-	virtual std::string const	&getName() const = 0;
-	virtual void				equip(AMateria *m) = 0;
-	virtual void				unequip(int idx) = 0;
-	virtual void				use(int idx, ICharacter &target) = 0;
+	MateriaSource();
+	MateriaSource(MateriaSource const &copy);
+	virtual ~MateriaSource();
+
+	MateriaSource	&operator=(MateriaSource const &rhs);
+
+	void			learnMateria(AMateria *m);
+	AMateria		*createMateria(std::string const &type);
 };
 
 #endif
