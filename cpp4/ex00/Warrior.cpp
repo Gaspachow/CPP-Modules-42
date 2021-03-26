@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/22 19:56:20 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/22 20:03:29 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/26 16:54:34 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 #include <string>
 
 Warrior::Warrior(std::string name) : Victim(name) {
+	std::cout << "Bwaaaaaar!!!" << std::endl;
+	return;
+}
+
+Warrior::Warrior(Warrior const &copy) : Victim(copy) {
 	std::cout << "Bwaaaaaar!!!" << std::endl;
 	return;
 }

@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/22 19:17:21 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/22 19:44:40 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/26 16:54:22 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 #include <string>
 
 Peon::Peon(std::string name) : Victim(name) {
+	std::cout << "Zog Zog." << std::endl;
+	return;
+}
+
+Peon::Peon(Peon const &copy) : Victim(copy) {
 	std::cout << "Zog Zog." << std::endl;
 	return;
 }
