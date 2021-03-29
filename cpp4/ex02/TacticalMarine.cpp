@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 15:00:28 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/25 18:12:52 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/29 17:11:18 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,6 @@ void					TacticalMarine::rangedAttack() const {
 }
 
 void					TacticalMarine::meleeAttack() const {
-	std::cout << "* attackas with a chainsword *" << std::endl;
+	std::cout << "* attacks with a chainsword *" << std::endl;
 	return;
 }

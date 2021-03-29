@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 16:55:57 by gsmets            #+#    #+#             */
-/*   Updated: 2021/03/25 18:22:39 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/03/29 17:14:13 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 int	main() {
 
-	std::cout << "1. Creating a Marine and Terminator and pushing them in Squad1" << std::endl;
+	std::cout << "1. Creating a Marine and Terminator and pushing them in Squad1  + testing duplicate marine error" << std::endl;
 		ISpaceMarine *bob = new TacticalMarine;
 		ISpaceMarine *jim = new AssaultTerminator;
 
@@ -28,6 +28,8 @@ int	main() {
 
 		squad->push(bob);
 		squad->push(jim);
+		squad->push(bob); // this will not add him and display an error, as he already exists in the squad
+		squad->push(jim); // this will not add him and display an error, as he already exists in the squad
 	std::cout << std::endl;
 
 	/*
@@ -55,12 +57,12 @@ int	main() {
 	std::cout << std::endl;
 
 	std::cout << "4. Doing assignation of Squad1 in empty Squad2" << std::endl;
-		Squad *squad3 = new Squad;
-		*squad3 = *squad;
+		Squad *squad2 = new Squad;
+		*squad2 = *squad;
 	std::cout << std::endl;
 
 	std::cout << "5. Doing assignation of Squad1 in already filled Squad2 (should kill all soliders before deep copy)" << std::endl;
-		*squad3 = *squad;
+		*squad2 = *squad;
 	std::cout << std::endl;
 
 	std::cout << "6. Deleting Squad1" << std::endl;
@@ -72,7 +74,7 @@ int	main() {
 	std::cout << std::endl;
 
 	std::cout << "8. Deleting Squad2" << std::endl;
-		delete squad3;
+		delete squad2;
 	std::cout << std::endl;
 
 	std::cout << "9. Deleting empty ISquad" << std::endl;
