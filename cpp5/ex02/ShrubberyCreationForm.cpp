@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 13:35:51 by gsmets            #+#    #+#             */
-/*   Updated: 2021/04/02 17:38:54 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/04/02 19:07:14 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <iostream>
 #include <fstream>
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string const &target) : Form("Shrubbery Creation Form", 145, 137), _target(target) {
+ShrubberyCreationForm::ShrubberyCreationForm(std::string const &target) : Form("shrubbery creation", 145, 137, target) {
 	return;
 }
 
@@ -29,7 +29,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm() {
 }
 
 ShrubberyCreationForm	&ShrubberyCreationForm::operator=(ShrubberyCreationForm const &rhs) {
-	_target = rhs._target;
+	std::string stupidSubject = rhs.getName();
 	return (*this);
 }
 
@@ -40,7 +40,7 @@ void					ShrubberyCreationForm::execute(Bureaucrat const &executor) const {
 		throw Form::GradeTooLowException();
 
 	std::ofstream	newFs;
-	std::string		fileName = _target + "_shrubbery";	
+	std::string		fileName = this->getTarget() + "_shrubbery";	
 
 	newFs.open(fileName.c_str());
 	if (!(newFs.good()))

@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 13:35:14 by gsmets            #+#    #+#             */
-/*   Updated: 2021/04/02 17:18:33 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/04/02 19:09:42 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,21 @@ class Form {
 
 private:
 	std::string const	_name;
+	std::string			_target;
 	bool				_signed;
 	int	const			_signGrade;
 	int	const			_execGrade;
 
 public:
 	Form();
-	Form(std::string const &name, int const sGrade, int const xGrade);
+	Form(std::string const &name, int const sGrade, int const xGrade, std::string const &target);
 	Form(Form const &copy);
 	virtual ~Form();
 
 	Form			&operator=(Form const &rhs);
 
 	std::string		getName() const;
+	std::string		getTarget() const;
 	int				getSignGrade() const;
 	int				getExecGrade() const;
 	bool			isSigned() const;

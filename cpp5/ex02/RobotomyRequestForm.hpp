@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 13:35:14 by gsmets            #+#    #+#             */
-/*   Updated: 2021/04/02 17:30:08 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/04/02 19:07:19 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ class Bureaucrat;
 class RobotomyRequestForm : public Form {
 
 private:
-	std::string	_target;
 	RobotomyRequestForm(); // can't create this class without a target
 
 public:
@@ -31,7 +30,6 @@ public:
 	RobotomyRequestForm			&operator=(RobotomyRequestForm const &rhs);
 
 	void	execute(Bureaucrat const &executor) const;
-
 };
 
 #endif

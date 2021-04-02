@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 13:35:51 by gsmets            #+#    #+#             */
-/*   Updated: 2021/04/02 17:19:03 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/04/02 19:02:46 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@ Form::Form() : _name("Boring Form"), _signed(0), _signGrade(150), _execGrade(150
 	return;
 }
 
-Form::Form(std::string const &name, int const sGrade, int const xGrade) :
+Form::Form(std::string const &name, int const sGrade, int const xGrade, std::string const &target) :
 	_name(name),
+	_target(target),
 	_signed(0),
 	_signGrade(sGrade),
 	_execGrade(xGrade)
@@ -51,6 +52,10 @@ Form			&Form::operator=(Form const &rhs) {
 
 std::string			Form::getName() const {
 	return(_name);
+}
+
+std::string			Form::getTarget() const {
+	return(_target);
 }
 
 int					Form::getSignGrade() const {

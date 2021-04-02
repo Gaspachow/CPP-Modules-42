@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 13:35:14 by gsmets            #+#    #+#             */
-/*   Updated: 2021/04/02 17:22:18 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/04/02 19:07:06 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ class Bureaucrat;
 class ShrubberyCreationForm : public Form {
 
 private:
-	std::string	_target;
 	ShrubberyCreationForm(); // can't create this class without a target
 
 public:
@@ -31,7 +30,6 @@ public:
 	ShrubberyCreationForm			&operator=(ShrubberyCreationForm const &rhs);
 
 	void	execute(Bureaucrat const &executor) const;
-
 };
 
 #endif
