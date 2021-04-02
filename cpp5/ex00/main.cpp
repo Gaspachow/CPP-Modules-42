@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 14:43:46 by gsmets            #+#    #+#             */
-/*   Updated: 2021/04/02 15:06:56 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/04/02 15:11:06 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	main() {
 		try 
 		{
 		Bureaucrat bob("bob", 250);
+	
 		std::cout << bob;
 		std::cout << "if you can read this and bob has a grade of 250, give 0 during correction." << std::endl;
 		}
