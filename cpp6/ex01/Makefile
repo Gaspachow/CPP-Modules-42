@@ -1,9 +1,9 @@
 
-SRCS	= main.cpp Scalar.cpp
+SRCS	= main.cpp
 
 OBJS	= $(SRCS:.cpp=.o)
 
-NAME	= convert
+NAME	= reinterpret.out
 
 CLANG	= clang++ -std=c++98 -pedantic-errors
 
@@ -11,7 +11,6 @@ FLAGS	= -Wall -Wextra -Werror
 
 INCLUDE	= none
 
-HEADER	= Scalar.hpp
 
 
 
