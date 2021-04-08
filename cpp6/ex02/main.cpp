@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 15:21:47 by gsmets            #+#    #+#             */
-/*   Updated: 2021/04/08 16:24:31 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/04/08 16:30:24 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ int 	main() {
 		identify_from_reference(*ptr);
 	std::cout << std::endl;
 
-	std::cout << "--- Generating NULL class of type Base (not A, B or C) ---" << std::endl;
+	std::cout << "--- Generating wrong class of type Base (not A, B or C) ---" << std::endl;
 		Base *ptr2 = new Base;
 		identify_from_pointer(ptr2);
 		identify_from_reference(*ptr2);
