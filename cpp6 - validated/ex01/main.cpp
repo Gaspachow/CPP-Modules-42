@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 14:59:10 by gsmets            #+#    #+#             */
-/*   Updated: 2021/04/07 19:24:47 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/04/12 13:36:18 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef	struct 	Data {
 }					Data;
 
 void	*serialize(void) {
-	// Allocating 32 + 4 + 32 = 68 bytes. (If on mac, it would be 24 + 4 + 24 = 52)
+	// Allocating 8 + 4 + 8 = 20 bytes. ( 8 chars + 1 int + 8 chars)
 	char	*raw = new char[20];
 	char	str1[9];
 	char	str2[9];
