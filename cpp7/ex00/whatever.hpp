@@ -6,9 +6,12 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 13:40:16 by gsmets            #+#    #+#             */
-/*   Updated: 2021/04/12 14:35:07 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/04/12 15:18:38 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef WHATEVER_H
+# define WHATEVER_H
 
 template < typename T >
 void	swap(T &a, T &b) {
@@ -50,3 +53,5 @@ bool operator<=( Awesome const & rhs ) const { return (this->_n <= rhs._n); }
 
 int	getN() const { return (this->_n); }
 };
+
+#endif
