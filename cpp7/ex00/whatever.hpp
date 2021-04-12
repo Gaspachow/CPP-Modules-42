@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 13:40:16 by gsmets            #+#    #+#             */
-/*   Updated: 2021/04/12 15:18:38 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/04/12 15:25:03 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,17 +41,17 @@ private:
 	int _n;
 
 public:
-Awesome():_n(0){}
-Awesome( int n ) : _n( n ) {}
+	Awesome():_n(0){}
+	Awesome( int n ) : _n( n ) {}
 
-bool operator==( Awesome const & rhs ) const { return (this->_n == rhs._n); }
-bool operator!=( Awesome const & rhs ) const { return (this->_n != rhs._n); }
-bool operator>( Awesome const & rhs ) const { return (this->_n > rhs._n); }
-bool operator<( Awesome const & rhs ) const { return (this->_n < rhs._n); }
-bool operator>=( Awesome const & rhs ) const { return (this->_n >= rhs._n); }
-bool operator<=( Awesome const & rhs ) const { return (this->_n <= rhs._n); }
+	bool operator==( Awesome const & rhs ) const { return (this->_n == rhs._n); }
+	bool operator!=( Awesome const & rhs ) const { return (this->_n != rhs._n); }
+	bool operator>( Awesome const & rhs ) const { return (this->_n > rhs._n); }
+	bool operator<( Awesome const & rhs ) const { return (this->_n < rhs._n); }
+	bool operator>=( Awesome const & rhs ) const { return (this->_n >= rhs._n); }
+	bool operator<=( Awesome const & rhs ) const { return (this->_n <= rhs._n); }
 
-int	getN() const { return (this->_n); }
+	int	getN() const { return (this->_n); }
 };
 
 #endif
