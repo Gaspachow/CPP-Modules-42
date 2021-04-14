@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 17:23:46 by gsmets            #+#    #+#             */
-/*   Updated: 2021/04/13 19:55:50 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/04/14 15:49:00 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,11 @@ long			Span::shortestSpan() {
 	std::list<int>::iterator iter = next++;
 	std::list<int>::iterator end = _list.end();
 
-	long min = std::abs(*(next++) - *(iter++));
+	long min = std::abs(static_cast<long>(*(next++)) - static_cast<long>(*(iter++)));
 	long tmp;
 	while (next != end)
 	{
-		tmp = std::abs(*(next++) - *(iter++));
+		tmp = std::abs(static_cast<long>(*(next++)) - static_cast<long>(*(iter++)));
 		if (tmp < min)
 			min = tmp;
 	}
@@ -67,7 +67,7 @@ long			Span::longestSpan() const {
 	if (_list.size() < 2)
 		throw std::logic_error("Need minimum two numbers to find a span.");
 
-	int min = *std::min_element(_list.begin(), _list.end());
-	int max = *std::max_element(_list.begin(), _list.end());
+	long min = *std::min_element(_list.begin(), _list.end());
+	long max = *std::max_element(_list.begin(), _list.end());
 	return (max - min);
 }
