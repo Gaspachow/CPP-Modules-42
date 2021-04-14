@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 17:23:27 by gsmets            #+#    #+#             */
-/*   Updated: 2021/04/13 19:56:03 by gsmets           ###   ########.fr       */
+/*   Updated: 2021/04/14 16:16:47 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ public:
 	long	shortestSpan();
 	long	longestSpan() const;
 
-	template <class Iter>
+	template <typename Iter>
 	void	addNumber(Iter begin, Iter end) {
 		int sizeLeft = static_cast<int>(_N) - static_cast<int>(_list.size());
 		if (std::distance(begin, end) > sizeLeft)
